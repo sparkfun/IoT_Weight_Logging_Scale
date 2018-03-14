@@ -18,7 +18,6 @@
  * This code is beerware; if you see me (or any other SparkFun employee) at the
  * local, and you've found our code helpful, please buy us a round!
  * ****************************************************************************/
- */
 
 //-------------------------------------------------------------------------------------
 // HX711_ADC.h
@@ -67,12 +66,25 @@ void loop() {
 
   //get smoothed value from data set + current calibration factor
   if (millis() > t + 250) {
-    float i = LoadCell.getData();
+    float i = fabs(LoadCell.getData());
     float v = LoadCell.getCalFactor();
     Serial.print("Load_cell output val: ");
     Serial.print(i);
     Serial.print("      Load_cell calFactor: ");
     Serial.println(v);
+    
+    // Create a string which is the integer value of the weight times 10,
+    //  to remove the decimal point.
+    String weight = String(int(i*10));
+    Serial2.write(0x76); // Clear the display
+    Serial2.print(weight); // Write out the weight value to the display
+    
+    // Identify which decimal point to set, and set it.
+    int shiftBy = 5-weight.length();
+    int decimalPoint = 0x08>>(shiftBy);
+    Serial2.write(0x77);
+    Serial2.write(decimalPoint & 0x0F);
+    
     t = millis();
   }
 
