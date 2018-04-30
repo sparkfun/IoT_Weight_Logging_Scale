@@ -1,4 +1,4 @@
-SparkFun IoT WEight Logging Scale
+SparkFun IoT Weight Logging Scale
 ========================================
 
 [![Project shot](https://cdn.sparkfun.com/r/600-600/assets/learn_tutorials/7/4/1/iot_scale_project_shot.jpg)](https://cdn.sparkfun.com/assets/learn_tutorials/7/4/1/iot_scale_project_shot.jpg)
