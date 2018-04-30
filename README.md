@@ -1,9 +1,7 @@
 SparkFun IoT WEight Logging Scale
 ========================================
 
-![SparkFun Part Name](URL for picture of part)
-
-[*SparkFun Part Name (SKU)*](URL for product on Sparkfun.com)
+[![Project shot](https://cdn.sparkfun.com/r/600-600/assets/learn_tutorials/7/4/1/iot_scale_project_shot.jpg)](https://cdn.sparkfun.com/assets/learn_tutorials/7/4/1/iot_scale_project_shot.jpg)
 
 IoT weight logging bathroom scale
 
